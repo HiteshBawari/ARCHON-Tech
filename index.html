@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ARCHON Tech | Premium Web Solutions Starting From $9</title>
+<meta name="description" content="ARCHON Tech builds premium modern web development, responsive websites, creative animations, interactive experiences, and professional web solutions — starting from just $9." />
+<meta property="og:title" content="ARCHON Tech | Premium Web Solutions Starting From $9" />
+<meta property="og:description" content="Premium modern web development, responsive websites, creative animations, interactive experiences, and professional web solutions — starting from just $9." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="assets/archon-logo.png" type="image/png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<a href="#home" class="skip-link">Skip to content</a>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#home" class="navbar__logo" aria-label="ARCHON Tech home">
+      <img src="archon-logo.png" alt="ARCHON Tech logo" class="navbar__logo-img" />
+      <span class="navbar__logo-text">ARCHON<span class="navbar__logo-suffix"> Tech</span></span>
+    </a>
+
+    <nav class="navbar__links" aria-label="Primary">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <a href="#contact" class="navbar__cta">Start a project</a>
+
+    <button class="navbar__burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav aria-label="Mobile Primary">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+  <a href="#contact" class="mobile-menu__cta">Start your project</a>
+</div>
+
+<main id="home">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__inner">
+
+      <div class="hero__left">
+        <span class="badge" data-anim="badge">
+          <span class="badge__dot"></span> Modern Web Solutions
+        </span>
+
+        <h1 class="hero__headline" data-anim="headline">
+          <span class="line">Build your digital presence</span>
+          <span class="line">with <em>ARCHON Tech</em>.</span>
+        </h1>
+
+        <div class="hero__price" data-anim="price">
+          <span class="hero__price-label">Premium web services starting from just</span>
+          <span class="hero__price-figure"><span class="hero__price-currency">$</span>9</span>
+        </div>
+
+        <p class="hero__sub" data-anim="sub">
+          Modern technology, creative development, and premium UI/UX — combined into
+          fast, responsive websites that don't require an agency-sized budget.
+        </p>
+
+        <div class="hero__cta-row" data-anim="cta">
+          <a href="#projects" class="btn btn--primary">Explore our work</a>
+          <a href="#contact" class="btn btn--ghost">Start your project</a>
+        </div>
+      </div>
+
+      <div class="hero__right" data-anim="scene">
+        <div class="scene-wrap">
+          <canvas id="studio-canvas" aria-hidden="true"></canvas>
+          <div class="scene-hint">Drag to look around</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ VALUE / AFFORDABILITY ============ -->
+  <section class="value" aria-label="Why choose us">
+    <div class="section-inner">
+      <h2 class="value__headline">Premium quality doesn't have to be expensive.</h2>
+      <p class="value__sub">Every project is built with the same modern stack and craftsmanship,
+        regardless of budget — because good engineering scales down just as well as it scales up.</p>
+
+      <div class="value__grid">
+        <article class="value-card">
+          <div class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3.5v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9v-5L12 3z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Premium quality</h3>
+          <p>Clean architecture, considered UI, and code built to last past launch day.</p>
+        </article>
+        <article class="value-card">
+          <div class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5l-6 7 6 7"/><path d="M16 5l6 7-6 7"/><path d="M13.5 4l-3 16"/></svg>
+          </div>
+          <h3>Modern technology</h3>
+          <p>GSAP-driven motion, Three.js experiences, and responsive layouts as standard.</p>
+        </article>
+        <article class="value-card value-card--price">
+          <div class="icon-badge icon-badge--light" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2.2"/><path d="M12 19.8V22"/><path d="M4.9 4.9l1.5 1.5"/><path d="M17.6 17.6l1.5 1.5"/><path d="M2 12h2.2"/><path d="M19.8 12H22"/><path d="M4.9 19.1l1.5-1.5"/><path d="M17.6 6.4l1.5-1.5"/><circle cx="12" cy="12" r="4.2"/></svg>
+          </div>
+          <h3>Starting from just $9</h3>
+          <p>Entry-level builds priced for individuals and creators, without cutting corners.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about" aria-label="About ARCHON Tech">
+    <div class="section-inner about__inner">
+      <div class="about__copy">
+        <span class="eyebrow">About</span>
+        <h2>Digital experiences, engineered with intent.</h2>
+        <p>ARCHON Tech builds modern, visually impressive, and high-quality websites for
+          individuals, creators, startups, and small businesses. We believe a premium web
+          presence shouldn't require an agency-sized retainer.</p>
+        <p>Every build combines responsive layout systems, purposeful motion, and interactive
+          detail — so the finished site feels considered, not templated.</p>
+
+        <div class="about__stats">
+          <div class="stat"><span class="stat__num" data-count="9">0</span><span class="stat__label">Starting price ($)</span></div>
+          <div class="stat"><span class="stat__num" data-count="100">0</span><span class="stat__label">% responsive builds</span></div>
+          <div class="stat"><span class="stat__num" data-count="5">0</span><span class="stat__label">Core technologies</span></div>
+        </div>
+      </div>
+
+      <div class="about__tags">
+        <span class="tag">Premium quality</span>
+        <span class="tag">Modern development</span>
+        <span class="tag">Fully responsive</span>
+        <span class="tag">Starting from $9</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects" aria-label="Projects">
+    <div class="section-inner">
+      <span class="eyebrow">Selected work</span>
+      <h2 class="section-title">A portfolio built on real projects.</h2>
+      <p class="section-lede">
+        The following slots are reserved for real, shipped projects — replace the placeholder
+        cards below with actual names, links, and screenshots.
+      </p>
+
+      <!--
+        ⚠️ REAL PROJECT PLACEHOLDER NOTICE:
+        These three cards are placeholders because the referenced portfolio
+        (hitesh-dev-nine.vercel.app) is a client-side rendered app that could not
+        be crawled for real project names/links/descriptions. Replace the
+        title / description / tags / href for each .project-card below with
+        your real project details.
+      -->
+      <div class="projects__grid projects__grid--real">
+        <article class="project-card" data-tilt>
+          <div class="project-card__media" style="background:linear-gradient(135deg,#33294f,#4a2a3c);">
+            <span class="project-card__placeholder-label">Night Owl</span>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Client Website</span>
+            <h3>Landing Page</h3>
+            <p>A sleek business landing page with a modern design and smooth animations.</p>
+            <a href="https://night-owl-india-website.vercel.app/" class="project-card__link" target="_blank" rel="noopener noreferrer">View live project →</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-card__media" style="background:linear-gradient(135deg,#1f3540,#33294f);">
+            <span class="project-card__placeholder-label">Hitesh.dev</span>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Client Website</span>
+            <h3>Portfolio Website</h3>
+            <p>A modern developer portfolio with GSAP, 3D and premium animation.</p>
+            <a href="https://hitesh-dev-nine.vercel.app/" class="project-card__link" target="_blank" rel="noopener noreferrer">View live project →</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-card__media" style="background:linear-gradient(135deg,#4a2a3c,#1f3540);">
+            <span class="project-card__placeholder-label">Sumita Nigam</span>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Client Website</span>
+            <h3>E-commerce</h3>
+            <p>interior design e-commerce website with modern design and smooth animations.</p>
+            <a href="https://smitanigam.com/whiteform.html" class="project-card__link">View live project →</a>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="projects__subheading">Concept &amp; demo projects</h3>
+      <p class="section-lede">A few additional showcase builds to illustrate range — clearly labeled as concept work, not live client projects link for their polices.</p>
+
+      <div class="projects__grid projects__grid--concept">
+        <article class="project-card" data-tilt>
+          <div class="project-card__media" style="background:linear-gradient(135deg,#2a2444,#221f38);"><span class="project-card__badge">Concept Project</span></div>
+          <div class="project-card__body">
+            <span class="project-card__tag">SaaS Platform</span>
+            <h3>Flowline Dashboard</h3>
+            <p>A modern SaaS dashboard concept with data panels, usage charts, and account management.</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-card__media" style="background:linear-gradient(135deg,#221f38,#2a2444);"><span class="project-card__badge">Demo Project</span></div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Full Stack / MERN</span>
+            <h3>Kanban Flow</h3>
+            <p>A full stack task board demo with authentication, drag-and-drop boards, and a REST API backend.</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-card__media" style="background:linear-gradient(135deg,#3a2438,#221f38);"><span class="project-card__badge">Concept Project</span></div>
+          <div class="project-card__body">
+            <span class="project-card__tag">E-Commerce</span>
+            <h3>Arora Goods</h3>
+            <p>A premium storefront concept with product filtering, cart interactions, and checkout flow.</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-card__media" style="background:linear-gradient(135deg,#1c2e38,#221f38);"><span class="project-card__badge">Case Study</span></div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Admin Dashboard</span>
+            <h3>Ledgerview</h3>
+            <p>An internal analytics dashboard concept with orders, users, and revenue reporting views.</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-card__media" style="background:linear-gradient(135deg,#2c2545,#3a2438);"><span class="project-card__badge">Experimental Project</span></div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Cloud / AWS</span>
+            <h3>Cloudframe</h3>
+            <p>A cloud architecture showcase illustrating a scalable, AWS-hosted application layout.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services" id="services" aria-label="Services">
+    <div class="section-inner">
+      <span class="eyebrow">Services</span>
+      <h2 class="section-title">What we build.</h2>
+      <p class="section-lede">Every service below is built on the same modern stack — pick the scope that fits your project, or ask about something custom.</p>
+
+      <div class="services__grid">
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7 13h6"/><path d="M7 16.5h4"/></svg>
+          </div>
+          <h3>Landing Page Development</h3>
+          <p>Modern, responsive, high-converting landing pages.</p>
+          <span class="service-card__price">From $9</span>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.4"/><rect x="14" y="3" width="7" height="7" rx="1.4"/><rect x="3" y="14" width="7" height="7" rx="1.4"/><rect x="14" y="14" width="7" height="7" rx="1.4"/></svg>
+          </div>
+          <h3>Portfolio Website</h3>
+          <p>Professional portfolios for developers, designers, creators, and freelancers.</p>
+          <span class="service-card__price">From $9</span>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5.5A2.5 2.5 0 0 1 10.5 3h3A2.5 2.5 0 0 1 16 5.5V7"/><path d="M3 12h18"/></svg>
+          </div>
+          <h3>Business Website Development</h3>
+          <p>Professional websites for businesses, startups, and organizations.</p>
+          <span class="service-card__price">From $59</span>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="13" height="10" rx="1.4"/><path d="M6.5 17.5h5"/><rect x="17" y="9" width="4.5" height="8.5" rx="1"/></svg>
+          </div>
+          <h3>Responsive Website Design</h3>
+          <p>Websites optimized for desktop, tablet, and mobile devices.</p>
+          <span class="service-card__price">From $29</span>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.4-6.4L21 8"/><path d="M21 4v4h-4"/><path d="M21 12a9 9 0 0 1-15.4 6.4L3 16"/><path d="M3 20v-4h4"/></svg>
+          </div>
+          <h3>Website Redesign</h3>
+          <p>Transform outdated websites into modern, visually impressive experiences.</p>
+          <span class="service-card__price">From $39</span>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+          </div>
+          <h3>Interactive Web Development</h3>
+          <p>Creative sites with advanced animation, GSAP interaction, and Three.js scenes.</p>
+          <span class="service-card__price">From $69</span>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 3-3 3-3-3 3-3z"/><path d="M12 16l3 3-3 3-3-3 3-3z"/><path d="M2 12l3-3 3 3-3 3-3-3z"/><path d="M16 12l3-3 3 3-3 3-3-3z"/></svg>
+          </div>
+          <h3>Custom Web Solutions</h3>
+          <p>Custom-built websites shaped around your specific project requirements.</p>
+          <span class="service-card__price">From $99</span>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M9 10v10"/><path d="M13 14h4"/><path d="M13 17h4"/></svg>
+          </div>
+          <h3>Dashboard Development</h3>
+          <p>Modern admin panels and dashboards with data views built for clarity.</p>
+          <span class="service-card__price">From $99</span>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M2 3h2.5L7 15h11l2.5-8H6"/></svg>
+          </div>
+          <h3>E-Commerce Website</h3>
+          <p>Modern online stores with responsive design and a premium shopping experience.</p>
+          <span class="service-card__price">From $129</span>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A5.5 5.5 0 0 1 17 10.2 4 4 0 0 1 16.5 18H7z"/></svg>
+          </div>
+          <h3>SaaS Website</h3>
+          <p>Modern product websites and platforms for SaaS businesses.</p>
+          <span class="service-card__price">From $599</span>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.8-4.8"/></svg>
+          </div>
+          <h3>SEO Website Optimization</h3>
+          <p>SEO-focused website optimization designed to improve technical performance, search visibility, and discoverability.</p>
+          <span class="service-card__price">From $699</span>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-badge icon-badge--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3l3 3-8.4 8.4-3.9.9.9-3.9 8.4-8.4z"/><path d="M4 21h16"/></svg>
+          </div>
+          <h3>Website Maintenance &amp; Support</h3>
+          <p>Ongoing updates, fixes, and technical support to keep your site running smoothly.</p>
+          <span class="service-card__price">From $79</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECHNOLOGIES ============ -->
+  <section class="tech" aria-label="Technologies">
+    <div class="section-inner">
+      <span class="eyebrow">Stack</span>
+      <h2 class="section-title">Built with a lean, modern toolkit.</h2>
+    </div>
+    <div class="tech__marquee">
+      <div class="tech__track">
+        <span class="tech__item">HTML5</span><span class="tech__item">CSS3</span><span class="tech__item">JavaScript</span><span class="tech__item">GSAP</span><span class="tech__item">Three.js</span>
+        <span class="tech__item">HTML5</span><span class="tech__item">CSS3</span><span class="tech__item">JavaScript</span><span class="tech__item">GSAP</span><span class="tech__item">Three.js</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS (Structure Before Style — sticky storytelling) ============ -->
+  <section class="process" aria-label="Our creative development process">
+    <div class="process__pin">
+      <div class="process__header">
+        <span class="eyebrow eyebrow--light">Our process</span>
+        <h2>Structure before style.</h2>
+
+        <div class="process__progress">
+          <div class="process__progress-track"><span class="process__progress-fill"></span></div>
+          <div class="process__labels">
+            <span data-label="1">Structure</span>
+            <span data-label="2">Motion</span>
+            <span data-label="3">Style</span>
+            <span data-label="4">Experience</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="process__stage-track">
+
+        <article class="process__stage" data-stage="1">
+          <div class="process__visual">
+            <div class="grid-demo" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="process__copy">
+            <span class="process__step">01 — Structure</span>
+            <h3>Layout and hierarchy first.</h3>
+            <p>Every build starts with clear sections, grid systems, and purposeful spacing — before a single color decision is made.</p>
+          </div>
+        </article>
+
+        <article class="process__stage" data-stage="2">
+          <div class="process__visual">
+            <div class="motion-demo" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="process__copy">
+            <span class="process__step">02 — Motion</span>
+            <h3>Animation with a job to do.</h3>
+            <p>GSAP-driven reveals and transitions guide attention through the page instead of distracting from it.</p>
+          </div>
+        </article>
+
+        <article class="process__stage" data-stage="3">
+          <div class="process__visual">
+            <div class="style-demo" aria-hidden="true"></div>
+          </div>
+          <div class="process__copy">
+            <span class="process__step">03 — Style</span>
+            <h3>Color, type, and polish.</h3>
+            <p>Gradients, typography, and visual detail are layered on once the structure and motion are already solid.</p>
+          </div>
+        </article>
+
+        <article class="process__stage" data-stage="4">
+          <div class="process__visual">
+            <div class="experience-demo" aria-hidden="true">
+              <div class="experience-demo__bar"><span></span><span></span><span></span></div>
+              <div class="experience-demo__body"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="process__copy">
+            <span class="process__step">04 — Experience</span>
+            <h3>A complete premium interface.</h3>
+            <p>Structure, motion, and style come together into a finished, interactive, production-ready experience.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq" aria-label="Frequently asked questions">
+    <div class="faq__bg" aria-hidden="true"></div>
+    <div class="section-inner faq__inner">
+      <div class="faq__intro">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="section-title">Questions, answered.</h2>
+      </div>
+
+      <div class="faq__list">
+        <div class="faq-item">
+          <h3><button class="faq-item__q" aria-expanded="false">How can services start from just $9?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-item__a"><p>Basic services can start from $9 depending on project scope. More advanced and custom projects are priced based on requirements.</p></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-item__q" aria-expanded="false">Will my website be responsive?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-item__a"><p>Yes. Websites are designed to work properly across desktop, tablet, and mobile devices.</p></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-item__q" aria-expanded="false">Do you use modern technologies?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-item__a"><p>Yes. Modern technologies and development techniques are selected according to project requirements.</p></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-item__q" aria-expanded="false">Can you redesign my existing website?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-item__a"><p>Yes. Existing websites can be redesigned and modernized.</p></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-item__q" aria-expanded="false">Can you add advanced animations?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-item__a"><p>Yes. Interactive animations and creative experiences can be developed using technologies such as GSAP and Three.js.</p></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-item__q" aria-expanded="false">How long does website development take?<span class="faq-item__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-item__a"><p>The development timeline depends on project complexity and requirements.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact" aria-label="Contact">
+    <div class="contact__bg" aria-hidden="true"></div>
+    <div class="section-inner contact__inner">
+      <div class="contact__intro">
+        <h2 class="contact__headline">Have an idea? <br>Let's build it with ARCHON Tech.</h2>
+        <p>Tell us about your project and budget — we'll get back to you with next steps.</p>
+      </div>
+
+      <form class="contact__form" id="contactForm" novalidate>
+        <!-- PASTE YOUR WEB3FORMS ACCESS KEY HERE -->
+        <input type="hidden" name="access_key" value="d15af939-1a68-4a4b-8bf2-fed43c88d00a">
+        <input type="hidden" name="subject" value="New project inquiry — ARCHON Tech">
+        <input type="checkbox" name="botcheck" class="hidden-field" style="display:none">
+
+        <div class="form-row">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="name" required autocomplete="name" />
+          <span class="form-error" data-error-for="fullName"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+          <span class="form-error" data-error-for="email"></span>
+        </div>
+
+        <div class="form-row form-row--split">
+          <div>
+            <label for="projectType">Project Type</label>
+            <select id="projectType" name="project_type" required>
+              <option value="" disabled selected>Select a project type</option>
+              <option>Landing Page</option>
+              <option>Portfolio Website</option>
+              <option>Business Website</option>
+              <option>Redesign</option>
+              <option>Interactive / Three.js Experience</option>
+              <option>Custom Solution</option>
+            </select>
+          </div>
+          <div>
+            <label for="budget">Budget</label>
+            <select id="budget" name="budget" required>
+              <option value="" disabled selected>Select a budget range</option>
+              <option>$9 – $50</option>
+              <option>$50 – $150</option>
+              <option>$150 – $400</option>
+              <option>$400+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <span class="form-error" data-error-for="message"></span>
+        </div>
+
+        <button type="submit" class="btn btn--primary contact__submit">
+          <span class="btn__label">Send message</span>
+          <span class="btn__spinner" aria-hidden="true"></span>
+        </button>
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="section-inner footer__inner">
+    <div class="footer__brand">
+      <img src="archon-logo.png" alt="ARCHON Tech logo" class="footer__logo-img" />
+      <span>ARCHON<span class="navbar__logo-suffix"> Tech</span></span>
+    </div>
+
+    <nav class="footer__links" aria-label="Footer">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <p class="footer__note">Premium web services starting from just $9.</p>
+    <p class="footer__copyright">&copy; <span id="year"></span> ARCHON Tech. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="three-scene.js"></script>
+<script src="main.js" defer></script>
+
+</body>
+</html>
