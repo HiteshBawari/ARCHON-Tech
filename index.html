@@ -95,18 +95,18 @@
           <svg id="growthGraph" viewBox="0 0 600 640" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
             <defs>
               <linearGradient id="growthLineGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#6c8079"/>
-                <stop offset="55%" stop-color="#cdb995"/>
-                <stop offset="100%" stop-color="#a98a5c"/>
+                <stop offset="0%" stop-color="#B88A20"/>
+                <stop offset="55%" stop-color="#D4AF37"/>
+                <stop offset="100%" stop-color="#E6C766"/>
               </linearGradient>
               <radialGradient id="growthNodeGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#cdb995" stop-opacity="0.9"/>
-                <stop offset="100%" stop-color="#cdb995" stop-opacity="0"/>
+                <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
               </radialGradient>
             </defs>
 
             <!-- faint grid -->
-            <g class="growth-grid" opacity="0.14" stroke="#f5f1e6" stroke-width="1">
+            <g class="growth-grid" opacity="0.14" stroke="#F7F3EA" stroke-width="1">
               <line x1="0" y1="120" x2="600" y2="120"/>
               <line x1="0" y1="260" x2="600" y2="260"/>
               <line x1="0" y1="400" x2="600" y2="400"/>
@@ -117,7 +117,7 @@
             </g>
 
             <!-- abstract architectural outlines -->
-            <g class="growth-arch" opacity="0.5" stroke="#746c5b" stroke-width="1.1" fill="none">
+            <g class="growth-arch" opacity="0.5" stroke="#3A5686" stroke-width="1.1" fill="none">
               <rect x="70" y="430" width="110" height="150"/>
               <rect x="330" y="360" width="90" height="220"/>
               <path d="M420 360 L375 300 L330 360 Z"/>
@@ -125,7 +125,7 @@
             </g>
 
             <!-- minimal bars -->
-            <g class="growth-bars" fill="#8f6b45" opacity="0.55">
+            <g class="growth-bars" fill="#B88A20" opacity="0.55">
               <rect x="86" y="520" width="18" height="60"/>
               <rect x="118" y="490" width="18" height="90"/>
               <rect x="150" y="460" width="18" height="120"/>
@@ -138,20 +138,20 @@
             <!-- data nodes along the path -->
             <g class="growth-nodes">
               <circle class="node" cx="40" cy="560" r="18" fill="url(#growthNodeGlow)"/>
-              <circle class="node-dot" cx="40" cy="560" r="4" fill="#cdb995"/>
+              <circle class="node-dot" cx="40" cy="560" r="4" fill="#D4AF37"/>
 
               <circle class="node" cx="220" cy="400" r="18" fill="url(#growthNodeGlow)"/>
-              <circle class="node-dot" cx="220" cy="400" r="4" fill="#cdb995"/>
+              <circle class="node-dot" cx="220" cy="400" r="4" fill="#D4AF37"/>
 
               <circle class="node" cx="370" cy="260" r="18" fill="url(#growthNodeGlow)"/>
-              <circle class="node-dot" cx="370" cy="260" r="4" fill="#cdb995"/>
+              <circle class="node-dot" cx="370" cy="260" r="4" fill="#D4AF37"/>
 
               <circle class="node" cx="560" cy="90" r="22" fill="url(#growthNodeGlow)"/>
-              <circle class="node-dot" cx="560" cy="90" r="5" fill="#f5f1e6"/>
+              <circle class="node-dot" cx="560" cy="90" r="5" fill="#F7F3EA"/>
             </g>
 
             <!-- small scattered data points -->
-            <g class="growth-points" fill="#cdb995" opacity="0.6">
+            <g class="growth-points" fill="#D4AF37" opacity="0.6">
               <circle cx="110" cy="500" r="2"/>
               <circle cx="270" cy="360" r="2"/>
               <circle cx="320" cy="330" r="2"/>
