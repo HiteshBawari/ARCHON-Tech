@@ -34,12 +34,65 @@
     const isOpen = mobileMenu.classList.contains("is-open");
     isOpen ? closeMenu() : openMenu();
   });
-  // Services + every other in-page link: smooth scroll is handled natively via
+  // Every in-page link: smooth scroll is handled natively via
   // html { scroll-behavior: smooth } + href="#section-id". Close the mobile
-  // menu on any link tap (including Services) so it never blocks the target section.
+  // menu on any link tap so it never blocks the target section.
   mobileMenu.querySelectorAll(".mobile-link, .mobile-menu__cta").forEach((el) => {
     el.addEventListener("click", closeMenu);
   });
+
+  /* ============================================================
+     HERO GROWTH GRAPH
+     A slow, sophisticated line-draw + node reveal for the abstract
+     business-growth visual that replaced the old hero 3D model.
+  ============================================================ */
+  const growthWrap = document.getElementById("growthWrap");
+  if (growthWrap && window.gsap) {
+    const path = document.getElementById("growthPath");
+    const nodes = growthWrap.querySelectorAll(".node");
+    const nodeDots = growthWrap.querySelectorAll(".node-dot");
+    const points = growthWrap.querySelectorAll(".growth-points circle");
+    const grid = growthWrap.querySelector(".growth-grid");
+    const arch = growthWrap.querySelector(".growth-arch");
+    const bars = growthWrap.querySelector(".growth-bars");
+
+    gsap.set([grid, arch], { opacity: 0 });
+    gsap.set(bars, { opacity: 0, scaleY: 0.6, transformOrigin: "bottom" });
+
+    const growthTl = gsap.timeline({ delay: 0.5, defaults: { ease: "power2.out" } });
+    growthTl
+      .to(grid, { opacity: 0.14, duration: 1.1 }, 0)
+      .to(arch, { opacity: 0.5, duration: 1.1 }, 0.1)
+      .to(bars, { opacity: 0.55, scaleY: 1, duration: 1, stagger: 0.12 }, 0.3)
+      .to(path, { strokeDashoffset: 0, duration: 2.4, ease: "power1.inOut" }, 0.4)
+      .to(nodes, { opacity: 1, scale: 1, duration: 0.5, stagger: 0.35 }, 0.9)
+      .to(nodeDots, { opacity: 1, duration: 0.4, stagger: 0.35 }, 0.9)
+      .to(points, { opacity: 0.6, duration: 0.5, stagger: 0.06 }, 1.6);
+
+    gsap.set(nodes, { scale: 0.4 });
+
+    // Continuous slow float + glow pulse once revealed — non-user-triggered,
+    // kept subtle so it reads as "alive" without competing with the headline.
+    if (!prefersReducedMotion) {
+      gsap.to(".growth-nodes .node", {
+        scale: 1.15,
+        duration: 2.6,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+        stagger: { each: 0.5, from: "end" },
+        delay: 2.8,
+      });
+      gsap.to("#growthWrap", {
+        y: -10,
+        duration: 4.5,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+        delay: 2.5,
+      });
+    }
+  }
 
   /* ============ HERO LOAD SEQUENCE ============ */
   if (window.gsap) {
@@ -59,23 +112,23 @@
         stagger: 0.12,
       }, 0.28)
       .from(".hero__headline .line", { yPercent: 100 }, 0.28)
-      .to('[data-anim="price"]', { opacity: 1, y: 0, duration: 0.6 }, 0.62)
-      .from('[data-anim="price"]', { y: 16 }, 0.62)
-      .to('[data-anim="sub"]', { opacity: 1, y: 0, duration: 0.6 }, 0.74)
-      .from('[data-anim="sub"]', { y: 14 }, 0.74)
-      .to('[data-anim="cta"]', { opacity: 1, y: 0, duration: 0.6 }, 0.85)
-      .from('[data-anim="cta"] .btn', { y: 14, stagger: 0.1 }, 0.85)
+      .to('[data-anim="sub"]', { opacity: 1, y: 0, duration: 0.6 }, 0.68)
+      .from('[data-anim="sub"]', { y: 14 }, 0.68)
+      .to('[data-anim="cta"]', { opacity: 1, y: 0, duration: 0.6 }, 0.8)
+      .from('[data-anim="cta"] > *', { y: 14, stagger: 0.1 }, 0.8)
       .to('[data-anim="scene"]', { opacity: 1, scale: 1, duration: 0.9 }, 0.45)
-      .from('[data-anim="scene"]', { scale: 0.94 }, 0.45);
+      .from('[data-anim="scene"]', { scale: 0.96 }, 0.45);
 
     gsap.set(".navbar", { opacity: 0 });
-    gsap.set('[data-anim="scene"]', { scale: 0.94 });
+    gsap.set('[data-anim="scene"]', { scale: 0.96 });
   }
 
   /* ============ SCROLL REVEALS ============ */
   if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
     // Simple, purposeful per-section reveal (grid-aware stagger)
-    document.querySelectorAll(".value__grid, .projects__grid, .services__grid").forEach((grid) => {
+    document.querySelectorAll(
+      ".work__list, .confidential__grid, .services__list, .industries__grid, .why__grid, .testimonials__grid"
+    ).forEach((grid) => {
       const items = grid.querySelectorAll(":scope > *");
       gsap.set(items, { opacity: 0, y: 28 });
       ScrollTrigger.create({
@@ -88,7 +141,9 @@
     });
 
     // Section titles / eyebrows fade up
-    document.querySelectorAll(".about__copy, .contact__intro, .faq__intro").forEach((block) => {
+    document.querySelectorAll(
+      ".trust__copy, .about__copy, .contact__intro, .faq__intro, .confidential__head, .statement__inner"
+    ).forEach((block) => {
       gsap.set(block, { opacity: 0, y: 26 });
       ScrollTrigger.create({
         trigger: block,
@@ -105,6 +160,14 @@
       once: true,
       onEnter: () =>
         gsap.to(".about__tags .tag", { opacity: 1, x: 0, duration: 0.6, stagger: 0.1, ease: "power3.out" }),
+    });
+
+    gsap.set(".trust__industries", { opacity: 0, y: 20 });
+    ScrollTrigger.create({
+      trigger: ".trust__industries",
+      start: "top 85%",
+      once: true,
+      onEnter: () => gsap.to(".trust__industries", { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }),
     });
 
     gsap.set(".contact__form", { opacity: 0, y: 30 });
@@ -136,16 +199,18 @@
   } else {
     // Reduced motion fallback: show everything immediately
     document.querySelectorAll(
-      '.value-card, .project-card, .service-card, .faq-item, .about__copy, .contact__intro, .faq__intro, .about__tags .tag, .contact__form'
+      ".work-card, .confidential-card, .service-row, .industry-card, .why-card, .testimonial-slot, .faq-item, .trust__copy, .trust__industries, .about__copy, .contact__intro, .faq__intro, .confidential__head, .statement__inner, .about__tags .tag, .contact__form"
     ).forEach((el) => { el.style.opacity = 1; });
+    if (document.getElementById("growthPath")) {
+      document.getElementById("growthPath").style.strokeDashoffset = 0;
+    }
+    document.querySelectorAll(".growth-nodes .node, .growth-nodes .node-dot, .growth-points circle, .growth-grid, .growth-arch, .growth-bars")
+      .forEach((el) => { el.style.opacity = el.classList.contains("node") || el.classList.contains("node-dot") ? 1 : ""; });
   }
 
   /* ============================================================
-     PROCESS SECTION — "Structure Before Style"
-     Rebuilt from scratch: a single GSAP-driven crossfade timeline
-     controls all 4 stages. Only one animation system ever touches
-     these elements (no CSS class + inline-style fighting, which
-     was the root cause of the old overlapping-text bug).
+     PROCESS SECTION — "Discover / Design / Develop / Launch"
+     A single GSAP-driven crossfade timeline controls all 4 stages.
      Desktop: pinned, scroll-scrubbed crossfade sequence.
      Mobile/tablet: simple stacked scroll-reveal, no pin.
   ============================================================ */
@@ -164,8 +229,6 @@
 
       /* ---- Desktop / tablet-landscape: pinned crossfade ---- */
       "(min-width: 861px)": function () {
-        // gsap.context ensures every tween/ScrollTrigger created here is
-        // cleanly reverted if the viewport crosses back below 861px.
         const ctx = gsap.context(() => {
           gsap.set(stages, { opacity: 0, y: 18 });
           gsap.set(stages[0], { opacity: 1, y: 0 });
@@ -186,7 +249,6 @@
             },
           });
 
-          // Opening hold so stage 1 is readable before the first transition.
           tl.to({}, { duration: 0.6 });
 
           stages.forEach((stage, i) => {
@@ -194,7 +256,7 @@
             tl.to(stages[i - 1], { opacity: 0, y: -18, duration: 0.5, ease: "power1.inOut" })
               .to(stage, { opacity: 1, y: 0, duration: 0.5, ease: "power1.inOut" }, "<")
               .call(() => setActiveLabel(i))
-              .to({}, { duration: 0.9 }); // hold so the stage is readable
+              .to({}, { duration: 0.9 });
           });
 
           return () => {
@@ -225,14 +287,13 @@
       },
     });
   } else if (processSection) {
-    // No GSAP available: show every stage plainly, no animation.
     processSection.querySelectorAll(".process__stage").forEach((stage) => {
       stage.style.opacity = 1;
       stage.classList.add("is-visible");
     });
   }
 
-  /* ============ PROJECT CARD TILT (desktop only) ============ */
+  /* ============ WORK CARD TILT (desktop only) ============ */
   const isTouch = matchMedia("(hover: none)").matches;
   if (!isTouch && !prefersReducedMotion) {
     document.querySelectorAll("[data-tilt]").forEach((card) => {
@@ -240,10 +301,14 @@
         const rect = card.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
         const y = (e.clientY - rect.top) / rect.height - 0.5;
-        card.style.transform = `perspective(700px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg) translateY(-4px)`;
+        const media = card.querySelector(".work-card__media svg");
+        if (media) {
+          media.style.transform = `scale(1.04) translate(${x * 6}px, ${y * 6}px)`;
+        }
       });
       card.addEventListener("mouseleave", () => {
-        card.style.transform = "";
+        const media = card.querySelector(".work-card__media svg");
+        if (media) media.style.transform = "";
       });
     });
   }
@@ -312,7 +377,7 @@
     else setFieldError("email", "");
 
     const message = form.message.value.trim();
-    if (!message) { setFieldError("message", "Please enter a short message."); valid = false; }
+    if (!message) { setFieldError("message", "Please tell us a little about the project."); valid = false; }
     else setFieldError("message", "");
 
     return valid;
