@@ -250,12 +250,19 @@ button{ font-family: inherit; }
 .work__list .work-card:last-child{ border-bottom: 1px solid var(--c-line); }
 .work-card__media{
   position:relative; aspect-ratio: 16/11; overflow:hidden; background: var(--c-surface);
-  border: 1px solid var(--c-line);
+  border: 1px solid var(--c-line); border-radius: var(--r-sm);
 }
 .work-card:nth-child(even) .work-card__media{ order:2; }
-.work-card__media svg{ width:100%; height:100%; display:block; transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+.work-card__media img{
+  width:100%; height:100%; display:block; object-fit:cover; object-position: top center;
+  transition: transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.work-card__media::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background: linear-gradient(180deg, rgba(6,11,21,0) 55%, rgba(6,11,21,.22) 100%);
+}
 .work-card__media-tag{
-  position:absolute; top:16px; left:16px; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+  position:absolute; top:16px; left:16px; z-index:1; font-size:.72rem; font-weight:700; letter-spacing:.05em;
   color: var(--c-panel); background: var(--c-stone); padding: 5px 12px;
 }
 .work-card__num{ font-family: var(--font-display); font-size: .95rem; color: var(--c-ink-faint); margin-bottom: 18px; display:block; }
@@ -271,7 +278,7 @@ button{ font-family: inherit; }
 .work-card__link svg{ width:14px; height:14px; transition: transform .3s; }
 .work-card__link:hover{ color: var(--c-stone); border-color: var(--c-stone); gap: .9em; }
 .work-card__link:hover svg{ transform: translate(2px,-2px); }
-.work-card:hover .work-card__media svg{ transform: scale(1.04); }
+.work-card:hover .work-card__media img{ transform: scale(1.04); }
 
 /* ============ SERVICES ============ */
 .services{ padding: 110px 0; border-top: 1px solid var(--c-line); }
