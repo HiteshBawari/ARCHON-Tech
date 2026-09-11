@@ -301,13 +301,13 @@
         const rect = card.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
         const y = (e.clientY - rect.top) / rect.height - 0.5;
-        const media = card.querySelector(".work-card__media svg");
+        const media = card.querySelector(".work-card__media img");
         if (media) {
           media.style.transform = `scale(1.04) translate(${x * 6}px, ${y * 6}px)`;
         }
       });
       card.addEventListener("mouseleave", () => {
-        const media = card.querySelector(".work-card__media svg");
+        const media = card.querySelector(".work-card__media img");
         if (media) media.style.transform = "";
       });
     });
